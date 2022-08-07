@@ -5,3 +5,9 @@
 #
 #   movies = Movie.create([{ name: "Star Wars" }, { name: "Lord of the Rings" }])
 #   Character.create(name: "Luke", movie: movies.first)
+
+email = Rails.application.credentials.dig(:seed, :admin_email)
+pw = Rails.application.credentials.dig(:seed, :admin_password)
+
+Admin.create(email: email, password: pw)
+
