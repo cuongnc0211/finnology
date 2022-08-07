@@ -16,7 +16,27 @@
     <%= f.text_field :title, class: "form-control" %>
   </div>
 
+  <div class="form-group">
+    <%= f.label :sub_title %>
+    <%= f.text_field :title, class: "form-control" %>
+  </div>
+
+  <div class="form-group">
+    <%= f.label :content %>
+    <%= f.rich_text_area :content, class: "form-control" %>
+  </div>
+
+  <div class="form-group">
+    <%= f.label :status %>
+    <%= f.select :status, Article::STATUSES, {}, { class: "form-control" } %>
+  </div>
+
+  <div class="form-group">
+    <%= f.label :spotlight_until %>
+    <%= f.date_field :spotlight_until, class: "form-control" %>
+  </div>
+
   <div>
-    <%= f.submit 'submit' %>
+    <%= f.submit 'submit', class: 'btn btn-primary'%>
   </div>
 <% end %>
