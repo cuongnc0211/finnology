@@ -1,0 +1,15 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  title: MyString
+  subtitle: MyString
+  content: MyText
+  status: MyText
+  spotlight_until: 2022-08-07
+
+two:
+  title: MyString
+  subtitle: MyString
+  content: MyText
+  status: MyText
+  spotlight_until: 2022-08-07
