@@ -1,0 +1,8 @@
+- if flash.present?
+  div
+    - flash.keys.each do |key|
+      - if flash[key].is_a?(Array)
+        - flash[key].each do |msg|
+          = render partial: 'layouts/shared/flash_msg', locals: { alert_class: flash_alert_class(key), message: msg }
+      - else
+        = render partial: 'layouts/shared/flash_msg', locals: { alert_class: flash_alert_class(key), message: flash[key] }
