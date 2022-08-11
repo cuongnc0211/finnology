@@ -10,6 +10,11 @@
 
   <body>
     <%= render 'layouts/shared/flash' %>
-    <%= yield %>
+
+    <%= render 'layouts/public/nav_bar' %>
+
+    <div class="container-xxl px-4 px-xxl-2">
+      <%= yield %>
+    </div>
   </body>
 </html>
