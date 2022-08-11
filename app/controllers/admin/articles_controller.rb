@@ -65,6 +65,6 @@ class Admin::ArticlesController < Admin::BaseController
 
     # Only allow a list of trusted parameters through.
     def article_params
-      params.require(:article).permit(%i[title subtitle content spotlight_until status])
+      params.require(:article).permit(%i[title subtitle content spotlight_until status cover tag_list])
     end
 end
