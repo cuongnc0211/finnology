@@ -1,2 +1,9 @@
-<div id="<%= dom_id article %>">
-</div>
+<tr id="<%= dom_id article %>">
+  <td><%= article.id %></td>
+  <td><%= article.title %></td>
+  <td><%= article.status %></td>
+  <td>
+    <%= link_to "Show", [:admin, article], class: '' %> | 
+    <%= link_to "Edit", edit_admin_article_path(article), class: '' %>
+  </td>
+</tr>

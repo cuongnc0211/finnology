@@ -1,12 +1,17 @@
 <h1>Articles</h1>
 
 <div id="articles">
-  <% @articles.each do |article| %>
-    <%= render article %>
-    <p>
-      <%= link_to "Show this article", [:admin, article] %>
-    </p>
-  <% end %>
+  <table class="table table-striped table-hover">
+    <thead>
+      <th>ID</th>
+      <th>Title</th>
+      <th>Status</th>
+      <th>Action</th>
+    </thead>
+    <tbody>
+      <%= render partial: 'article', collection: @articles, as: :article %>
+    </tbody>
+  </table>
 </div>
 
 <%= link_to "New article", new_admin_article_path %>
