@@ -5,7 +5,8 @@ Rails.application.routes.draw do
 
   # Defines the root path route ("/")
   root "articles#index"
-  resources :articles, only: %i[index show]
+  resources :articles, only: %i[index]
+  get 'articles/:slug', to: 'articles#show', as: :article
 
   namespace :admin do
     root "articles#index"

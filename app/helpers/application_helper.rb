@@ -17,4 +17,8 @@ module ApplicationHelper
 
     url_for(article.cover)
   end
+
+  def public_article_link(article)
+    article_path(slug: article.slug)
+  end
 end
