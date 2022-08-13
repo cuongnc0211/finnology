@@ -1,4 +1,6 @@
 module ApplicationHelper
+  include Pagy::Frontend
+
   def flash_alert_class(key)
     case key
     when 'notice'
@@ -8,5 +10,11 @@ module ApplicationHelper
     else
       key
     end
+  end
+
+  def article_cover_url(article)
+    return 'https://via.placeholder.com/600x200?text=welcome%20to%20Finnology' if article.cover.blob.blank?
+
+    url_for(article.cover)
   end
 end

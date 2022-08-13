@@ -11,6 +11,9 @@ class Article < ApplicationRecord
 
   enum :status, STATUSES.zip(STATUSES).to_h
 
+  scope :newest, -> () { publish.order(id: :desc) }
+  scope :spotlights, -> () { publish.where(Article.arel_table[:spotlight_until].lt(Time.zone.now)) }
+
   def tag_list_value
     tag_list&.join(', ')
   end
