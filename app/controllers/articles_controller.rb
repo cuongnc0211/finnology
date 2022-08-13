@@ -1,7 +1,7 @@
 class ArticlesController < ApplicationController
   def index
     @spotlight = Article.spotlights.newest.first || Article.newest.first
-    @pagy, @articles = pagy(Article.newest.where.not(id: @spotlight.id))
+    @pagy, @articles = pagy(Article.newest.where.not(id: @spotlight&.id))
   end
 
   def show
