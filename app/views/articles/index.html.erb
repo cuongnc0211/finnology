@@ -1,10 +1,9 @@
+<div class="container">
+  <div class="block pt-0 mt-3 mx-0 px-0">
+    <%= render 'spotlight_article', article: @spotlight %>
+  </div>
 
-<div class="row">
-  <%= render 'spotlight_article', article: @spotlight %>
-
-  <div class="container py-5 px-0">
-    <div class="row mx-0">
-      <%= render partial: 'article', collection: @articles, as: :article %>
-    </div>
+  <div class="md:grid md:grid-cols-2 md:gap-4">
+    <%= render partial: 'article', collection: @articles, as: :article %>
   </div>
 </div>

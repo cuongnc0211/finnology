@@ -1,16 +1,15 @@
-<div class="col-12 col-md-6 mb-4">
-  <div class="card" style="">
-    <div class="cover-container">
-      <img src="<%= article_cover_url(article) %>" class="card-img-top img-fluid rounded" alt="...">
-    </div>
+<div class="shadow-xs rounded-lg bg-gray-50 my-3">
+  <div class="h-60 bg-orange-100">
+    <img src="<%= article_cover_url(article) %>" class="object-cover" style="width: 100%; height: 100%;">
+  </div>
+  <div class="h-28 px-4 py-1">
+    <p class="mb-2 text-lg font-semibold text-gray-600 dark:text-gray-400"><%= article.title %></p>
 
-    <div class="card-body">
-      <h5 class="card-title"><%= article.title %></h5>
-      <p class="card-text"><%= article.subtitle %></p>
-
-      <p class="lead mb-0">
-        <a href="<%= public_article_link(article) %>" class="text-dark font-weight-bold">Continue reading...</a>
-      </p>
-    </div>
+    <p class="text-sm font-light text-gray-700 dark:text-gray-200 truncate"><%= article.subtitle %></p>
+  </div>
+  <div class="h-10 px-4 pb-4">
+    <p class="text-sm font-medium text-gray-700 dark:text-gray-200">
+      <a href="<%= public_article_link(article) %>" class="">Continue reading...</a>
+    </p>
   </div>
 </div>

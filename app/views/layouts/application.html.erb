@@ -3,17 +3,20 @@
   <head>
     <title>Finnology</title>
     <%= render 'layouts/shared/header' %>
+    <meta name="author" content="name" />
+    <meta name="description" content="description here" />
+    <meta name="keywords" content="keywords,here" />
 
     <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
     <%= javascript_include_tag "application", "data-turbo-track": "reload", defer: true %>
   </head>
 
-  <body>
+  <body class="font-sans leading-normal tracking-normal">
     <%= render 'layouts/shared/flash' %>
 
     <%= render 'layouts/public/nav_bar' %>
 
-    <div class="container-xxl px-2">
+    <div class="container w-full md:w-8/12 mx-auto pt-20 px-3">
       <%= yield %>
     </div>
 
