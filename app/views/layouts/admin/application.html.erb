@@ -6,19 +6,41 @@
 
     <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
     <%= javascript_include_tag "application", "data-turbo-track": "reload", defer: true %>
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./assets/css/tailwind.output.css" />
+    <script
+      src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js"
+      defer
+    ></script>
+    <script src="./assets/js/init-alpine.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.min.css"
+    />
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.min.js"
+      defer
+    ></script>
+    <script src="./assets/js/charts-lines.js" defer></script>
+    <script src="./assets/js/charts-pie.js" defer></script>
+
   </head>
 
   <body>
-    <%= render 'layouts/shared/flash' %>
+    <div class="flex h-screen bg-white">
+      <%= render "layouts/admin/side_bar" %>
 
-    <%= render 'layouts/admin/nav' %>
+      <div class="flex flex-col flex-1 w-full">
+        <%= render 'layouts/shared/flash' %>
 
-    <div class="container-fluid" style="min-height: 1000px;">
-      <div class="row">
-        <%= render 'layouts/admin/side_bar' %>
+        <%= render 'layouts/admin/nav' %>
 
-        <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4" style="min-height: 1000px;">
-          <div class="px-5 py-5">
+        <main class="h-full">
+          <div class="container px-6 mx-auto grid">
             <%= yield %>
           </div>
         </main>

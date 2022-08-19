@@ -1,17 +1,23 @@
 <h1>Articles</h1>
 
+<div class="w-full rounded-lg shadow-xs">
+  <div class="w-full">
+    <table class="w-full whitespace-no-wrap table-auto">
+      <thead>
+        <th>ID</th>
+        <th>Title</th>
+        <th>Status</th>
+        <th>Action</th>
+      </thead>
+      <tbody class="bg-white divide-y">
+        <%= render partial: 'article', collection: @articles, as: :article %>
+      </tbody>
+    </table>
+  </div>
+</div>
+
 <div id="articles">
-  <table class="table table-striped table-hover">
-    <thead>
-      <th>ID</th>
-      <th>Title</th>
-      <th>Status</th>
-      <th>Action</th>
-    </thead>
-    <tbody>
-      <%= render partial: 'article', collection: @articles, as: :article %>
-    </tbody>
-  </table>
+  
 </div>
 
 <%= link_to "New article", new_admin_article_path %>
