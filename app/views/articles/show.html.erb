@@ -1,5 +1,19 @@
-<h1> <%= @article.title %> </h1>
+<div class="m-0 w-full">
+  <img src="<%= article_cover_url(@article) %>" style="height: auto" class="" \>
+</div>
 
-<button class="bg-sky-500 hover:bg-sky-700 ...">
-  Save changes
-</button>
+<div class="border-b border-grey-lighter py-12 lg:py-18">
+  <h1 class="pt-3 font-body text-4xl font-semibold text-primary md:text-5xl lg:text-6xl">
+    <%= @article.title %>
+  </h1>
+
+  <p class="pt-3 font-body text-xl font-light text-primary dark:text-white">
+    <%= raw @article.subtitle %>
+  </p>
+</div>
+
+<div class="border-b border-grey-lighter py-12 lg:py-18">
+  <p class="font-body font-light text-primary dark:text-white">
+    <%= raw @article.content %>
+  </p>
+</div>
