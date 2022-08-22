@@ -1,8 +1,17 @@
-<tr id="<%= dom_id article %>" class="text-gray-700">
-  <td><%= article.id %></td>
-  <td><%= article.title %></td>
-  <td><%= article.status %></td>
-  <td>
+<tr id="<%= dom_id article %>" class="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
+  <td class="py-4 px-6">
+    <%= article.id %>
+  </td>
+  <td class="py-4 px-6">
+    <%= article.title %>
+  </td>
+  <td class="py-4 px-6">
+    <%= article.status %>
+  </td>
+  <td class="py-4 px-6">
+    <%= article.spotlight_until %>
+  </td>
+  <td class="py-4 px-6">
     <%= link_to "Show", [:admin, article], class: '' %> | 
     <%= link_to "Edit", edit_admin_article_path(article), class: '' %>
   </td>

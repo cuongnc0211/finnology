@@ -13,3 +13,7 @@
   min-height: 60rem !important;
   height: auto;
 }
+
+.test {
+  color: red;
+}

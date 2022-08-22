@@ -1,23 +1,28 @@
-<h1>Articles</h1>
+<h1 class="text-lg text-gray-700 font-semibold mb-3">Articles List</h1>
 
-<div class="w-full rounded-lg shadow-xs">
-  <div class="w-full">
-    <table class="w-full whitespace-no-wrap table-auto">
-      <thead>
-        <th>ID</th>
-        <th>Title</th>
-        <th>Status</th>
-        <th>Action</th>
-      </thead>
-      <tbody class="bg-white divide-y">
-        <%= render partial: 'article', collection: @articles, as: :article %>
-      </tbody>
-    </table>
-  </div>
-</div>
-
-<div id="articles">
-  
+<div class="overflow-x-auto relative">
+  <table class="w-full text-sm text-left text-gray-500">
+    <thead class="text-xs text-gray-700 uppercase bg-gray-50">
+      <th scope="col" class="py-3 px-6">
+          ID
+      </th>
+      <th scope="col" class="py-3 px-6">
+          Title
+      </th>
+      <th scope="col" class="py-3 px-6">
+          Status
+      </th>
+      <th scope="col" class="py-3 px-6">
+          Spotlight
+      </th>
+      <th scope="col" class="py-3 px-6">
+          Action
+      </th>
+    </thead>
+    <tbody>
+      <%= render partial: 'article', collection: @articles, as: :article %>
+    </tbody>
+  </table>
 </div>
 
 <%= link_to "New article", new_admin_article_path %>
