@@ -19,6 +19,7 @@ module ApplicationHelper
   end
 
   def public_article_link(article)
-    article_path(slug: article.slug)
+    slug = article&.slug || 'sample'
+    article_path(slug: slug)
   end
 end

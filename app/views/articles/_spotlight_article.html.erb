@@ -1,9 +1,9 @@
 <div class="m-0 w-full bg-orange-50 bg-cover bg-bottom p-0 mb-5"
   style="background-image:url('<%= article_cover_url(article) %>'); height: 50vh; max-height:400px;">
   <div class="container mx-auto mb-5 max-w-4xl break-normal pt-24 text-center md:pt-32">
-    <h2 class="text-lg font-semibold"><%= article.title %></h2>
+    <h2 class="text-lg font-semibold"><%= article&.title %></h2>
 
-    <p class="truncate"><%= raw article.subtitle %></p>
+    <p class="truncate"><%= raw article&.subtitle %></p>
   </div>
   <div class="container mx-auto text-center">
     <p class="lead mb-0">

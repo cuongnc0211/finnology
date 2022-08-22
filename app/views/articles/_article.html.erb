@@ -3,9 +3,9 @@
     <img src="<%= article_cover_url(article) %>" class="object-cover" style="width: 100%; height: 100%;">
   </div>
   <div class="h-28 px-4 py-1">
-    <p class="mb-2 text-lg font-semibold text-gray-600 dark:text-gray-400"><%= article.title %></p>
+    <p class="mb-2 text-lg font-semibold text-gray-600 dark:text-gray-400"><%= article&.title %></p>
 
-    <p class="text-sm font-light text-gray-700 dark:text-gray-200 truncate"><%= article.subtitle %></p>
+    <p class="text-sm font-light text-gray-700 dark:text-gray-200 truncate"><%= article&.subtitle %></p>
   </div>
   <div class="h-10 px-4 pb-4">
     <p class="text-sm font-medium text-gray-700 dark:text-gray-200">
