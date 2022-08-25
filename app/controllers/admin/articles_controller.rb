@@ -21,7 +21,8 @@ class Admin::ArticlesController < Admin::BaseController
 
   # POST /admin/articles or /admin/articles.json
   def create
-    @article = Article.new(article_params)
+    slug = process_slug(params[:article][:title], params[:article][:slug])
+    @article = Article.new(article_params.merge(slug: slug))
 
     respond_to do |format|
       if @article.save
@@ -66,5 +67,12 @@ class Admin::ArticlesController < Admin::BaseController
     # Only allow a list of trusted parameters through.
     def article_params
       params.require(:article).permit(%i[title subtitle content spotlight_until status cover tag_list])
+    end
+
+    def process_slug(title, slug)
+      return nil if slug.present?
+
+      title.split(' ')
+      title.map {|i| i.downcase}.join('_')
     end
 end
