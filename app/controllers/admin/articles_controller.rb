@@ -3,7 +3,9 @@ class Admin::ArticlesController < Admin::BaseController
 
   # GET /admin/articles or /admin/articles.json
   def index
-    @pagy, @articles = pagy(Article.all)
+    @q = Article.ransack(params[:q])
+
+    @pagy, @articles = pagy(@q.result)
   end
 
   # GET /admin/articles/1 or /admin/articles/1.json

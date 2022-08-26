@@ -63,6 +63,8 @@ gem 'friendly_id', '~> 5.4.0'
 
 gem "pagy"
 
+gem 'ransack'
+
 # aws gems
 gem "aws-sdk-s3", require: false
 

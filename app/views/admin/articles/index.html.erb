@@ -4,6 +4,32 @@
   <%= link_to "New article", new_admin_article_path, class: "btn-primary" %>
 </div>
 
+<div class="w-full my-5 shadow py-5 px-2 rounded-lg">
+  <%= search_form_for @q, url: admin_articles_path do |f| %>
+    <div class="flex md:flex-row flex-col items-center justify-center">
+      <div class="flex mx-2 my-2 px-2 py-2 items-center justify-center">
+        <label>ID</label>
+        <%= f.search_field :id_eq, class: 'input-control mx-2' %>
+      </div>
+
+      <div class="flex mx-2 my-2 px-2 py-2 items-center justify-center">
+        <label>Title</label>
+        <%= f.search_field :title_cont, class: 'input-control mx-2' %>
+      </div>
+
+      <div class="flex mx-2 my-2 px-2 py-2 items-center justify-center">
+        <label>Status</label>
+        <%= f.select :status_cont,
+          options_for_select(Article.statuses.to_a, @q.status_cont), { include_blank: true }, { class: 'input-control mx-2' } %>
+      </div>
+
+      <div class="flex mx-2 my-2 px-2 py-2 items-center justify-center">
+        <%= f.submit "Search", class: 'btn-primary' %>
+      </div>
+    </div>
+  <% end %>
+</div>
+
 <div class="overflow-x-auto relative">
   <table class="w-full text-sm text-left text-gray-500">
     <thead class="text-xs text-gray-700 uppercase bg-gray-50">

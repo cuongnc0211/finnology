@@ -1,3 +1,5 @@
+require "pagy/extras/array"
+
 # frozen_string_literal: true
 
 # Pagy initializer file (5.10.1)
