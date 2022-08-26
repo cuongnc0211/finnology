@@ -9,18 +9,18 @@
     <div class="flex md:flex-row flex-col items-center justify-center">
       <div class="flex mx-2 my-2 px-2 py-2 items-center justify-center">
         <label>ID</label>
-        <%= f.search_field :id_eq, class: 'input-control mx-2' %>
+        <%= f.search_field :id_eq, class: 'form-control mx-2' %>
       </div>
 
       <div class="flex mx-2 my-2 px-2 py-2 items-center justify-center">
         <label>Title</label>
-        <%= f.search_field :title_cont, class: 'input-control mx-2' %>
+        <%= f.search_field :title_cont, class: 'form-control mx-2' %>
       </div>
 
       <div class="flex mx-2 my-2 px-2 py-2 items-center justify-center">
         <label>Status</label>
         <%= f.select :status_cont,
-          options_for_select(Article.statuses.to_a, @q.status_cont), { include_blank: true }, { class: 'input-control mx-2' } %>
+          options_for_select(Article.statuses.to_a, @q.status_cont), { include_blank: true }, { class: 'form-control mx-2' } %>
       </div>
 
       <div class="flex mx-2 my-2 px-2 py-2 items-center justify-center">

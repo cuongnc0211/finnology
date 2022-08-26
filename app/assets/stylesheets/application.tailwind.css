@@ -23,6 +23,14 @@
   }
 
   .input-control {
-    @apply px-4 py-2 rounded-full w-full border-blue-300 border-solid border-2
+    @apply px-4 py-2 h-12 rounded-lg w-full border-blue-300 border-solid border-2
+  }
+
+  .form-input {
+    @apply px-4 py-2 h-12 rounded-lg w-full border-blue-300 border-solid border-2
+  }
+
+  .form-group {
+    @apply flex mx-2 my-2 px-2 py-2 w-full
   }
 }

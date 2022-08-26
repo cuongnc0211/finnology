@@ -1,6 +1,8 @@
-<h1>Editing article</h1>
+<h1 class="main_title">Editing article #<%= @article.id %></h1>
 
-<%= render "form", article: @article %>
+<div class="w-full my-5 shadow py-5 px-2 rounded-lg">
+  <%= render "form", article: @article %>
+</div>
 
 <br>
 

@@ -1,9 +1,13 @@
-<h1>New article</h1>
+<h1 class="main_title">New Article</h1>
 
-<%= render "form", article: @article %>
+<div class="w-full my-5 shadow py-5 px-2 rounded-lg">
+  <%= render "form", article: @article %>
+</div>
+
 
 <br>
 
 <div>
+  <%= link_to "Back to articles", admin_articles_path %> | 
   <%= link_to "Back to articles", admin_articles_path %>
 </div>
