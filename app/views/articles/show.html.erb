@@ -1,9 +1,9 @@
-<%
-  content_for :blog_meta do
-    <meta name="description" content="<%= @article.subtitle %>" />
-    <meta name="keywords" content="<%= @article.tags.join(',') %>" />
-  end
-%>
+
+<% content_for :blog_meta do %>
+  <meta name="description" content="<%= @article.subtitle %>" />
+  <meta name="keywords" content="<%= @article.tags.join(',') %>" />
+<% end %>
+
 
 <div class="m-0 w-full">
   <img src="<%= article_cover_url(@article) %>" style="height: auto" class="" \>
