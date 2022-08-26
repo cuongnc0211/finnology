@@ -70,7 +70,7 @@ class Admin::ArticlesController < Admin::BaseController
     end
 
     def process_slug(title, slug)
-      return nil if slug.present?
+      return slug if slug.present?
 
       title.split(' ')
       title.map {|i| i.downcase}.join('_')
