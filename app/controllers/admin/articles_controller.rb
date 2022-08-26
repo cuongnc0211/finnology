@@ -3,7 +3,7 @@ class Admin::ArticlesController < Admin::BaseController
 
   # GET /admin/articles or /admin/articles.json
   def index
-    @articles = Article.all
+    @pagy, @articles = pagy(Article.all)
   end
 
   # GET /admin/articles/1 or /admin/articles/1.json

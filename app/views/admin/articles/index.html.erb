@@ -1,4 +1,8 @@
-<h1 class="text-lg text-gray-700 font-semibold mb-3">Articles List</h1>
+<h1 class="main_title">Articles List</h1>
+
+<div class="flex my-5">
+  <%= link_to "New article", new_admin_article_path, class: "btn-primary" %>
+</div>
 
 <div class="overflow-x-auto relative">
   <table class="w-full text-sm text-left text-gray-500">
@@ -23,6 +27,8 @@
       <%= render partial: 'article', collection: @articles, as: :article %>
     </tbody>
   </table>
-</div>
 
-<%= link_to "New article", new_admin_article_path %>
+  <div class="flex items-center justify-center my-5">
+    <%== pagy_nav(@pagy) %>
+  </div>
+</div>
