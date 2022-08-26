@@ -2,6 +2,10 @@
 <% content_for :blog_meta do %>
   <meta name="description" content="<%= @article.subtitle %>" />
   <meta name="keywords" content="<%= @article.tags.join(',') %>" />
+  <meta property="og:title" content="<%= @article.title %>">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="<%= article_url(@article) %>">
+  <meta property="og:image" content="<%= article_cover_url(@article) %>">
 <% end %>
 
 
