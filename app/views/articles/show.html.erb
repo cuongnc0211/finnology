@@ -1,8 +1,7 @@
 <%
   content_for :blog_meta do
-    <meta name="author" content="Finnology" />
-    <meta name="description" content="" />
-    <meta name="keywords" content="keywords,here" />
+    <meta name="description" content="<%= @article.subtitle %>" />
+    <meta name="keywords" content="<%= @article.tags.join(',') %>" />
   end
 %>
 
