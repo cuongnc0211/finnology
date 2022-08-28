@@ -15,7 +15,7 @@ module ApplicationHelper
   def article_cover_url(article)
     return 'https://via.placeholder.com/600x200?text=welcome%20to%20Finnology' if article.nil? || article.cover.blob.blank?
 
-    url_for(article.cover)
+    article.cover.attachment.url
   end
 
   def public_article_link(article)
