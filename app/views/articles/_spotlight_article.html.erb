@@ -1,13 +1,17 @@
 <div class="m-0 w-full bg-orange-50 bg-cover bg-bottom p-0 mb-5"
   style="background-image:url('<%= article_cover_url(article) %>'); height: 50vh; max-height:400px;">
   <div class="container mx-auto mb-5 max-w-4xl break-normal pt-24 text-center md:pt-32">
-    <a href="<%= public_article_link(article) %>" class="text-3xl font-semibold text-indigo-500 hover:underline hover:cursor-pointer"><%= article&.title %></a>
+    <a href="<%= public_article_link(article) %>"\
+      class="text-3xl font-semibold text-white hover:underline hover:cursor-pointer txt-shadow">
 
-    <p class="text-lg font-semibold truncate break-normal text-indigo-500"><%= raw article&.subtitle %></p>
+      <%= article&.title %>
+    </a>
+
+    <p class="text-lg font-semibold truncate break-normal text-white txt-shadow"><%= raw article&.subtitle %></p>
   </div>
   <div class="container mx-auto text-center">
     <p class="lead mb-0">
-      <a href="<%= public_article_link(article) %>" class="font-weight-bold text-indigo-500 hover:underline hover:cursor-pointer">Continue reading...</a>
+      <a href="<%= public_article_link(article) %>" class="font-weight-bold text-white hover:underline hover:cursor-pointer txt-shadow">Continue reading...</a>
     </p>
   </div>
 </div>

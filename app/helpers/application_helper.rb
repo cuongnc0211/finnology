@@ -15,7 +15,9 @@ module ApplicationHelper
   def article_cover_url(article)
     return 'https://via.placeholder.com/600x200?text=welcome%20to%20Finnology' if article.nil? || article.cover.blob.blank?
 
-    article.cover.attachment.url
+    return article.cover.attachment.url if Rails.env.production?
+
+    url_for(article.cover)
   end
 
   def public_article_link(article)
